@@ -1,0 +1,25 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "Basic reusable JS application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build-watch & npm run start-server",
+    "build-watch": "webpack -w",
+    "start-server": "nodemon --watch server -e js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Valeriia Harmash",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "volleyball": "^1.5.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.75.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

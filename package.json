@@ -1,0 +1,14 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-server & npm run  start-app",
+    "start-server": "npm run start --prefix ./server",
+    "start-app": "npm run start --prefix ./app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
