@@ -4,7 +4,7 @@ const { requireToken } = require('../middleware');
 const { generateToken, verifyPassword } = require('../../utils');
 
 // signup: create new user
-router.post('/', async (req, res, next) => {
+router.post('/signup', async (req, res, next) => {
   try {
     const { username, password } = req.body;
     const user = await User.create({ username, password });
@@ -17,7 +17,7 @@ router.post('/', async (req, res, next) => {
 });
 
 // login: verify user's credentials and generate user token
-router.post('/auth', async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
   const { username, password } = req.body;
   try {
     const user = await User.findOne({
