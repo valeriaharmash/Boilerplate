@@ -1,4 +1,11 @@
-const port = process.env.PORT || 3001;
+require('dotenv').config();
+const { db } = require('./db');
 const app = require('./app');
+const chalk = require('chalk');
+const port = process.env.PORT || 3001;
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+db.sync().then(function () {
+  app.listen(port, () =>
+    console.log(chalk.yellow(`Listening on port ${port}`))
+  );
+});
