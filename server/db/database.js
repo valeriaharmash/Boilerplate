@@ -11,7 +11,10 @@ console.log(
   chalk.yellow(`logger enabled: ${config.logging}`)
 );
 
-const db = new Sequelize(`postgres://localhost:5432/boilerplate`, {
+const dbConnectionSTRING =
+  process.env.DATABASE_URL || 'postgres://localhost:5432/boilerplate';
+
+const db = new Sequelize(dbConnectionSTRING, {
   config,
 });
 
